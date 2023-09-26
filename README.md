@@ -1,6 +1,10 @@
 # CDBert
 
-This is the official implementation of the paper "Shuo Wen Jie Zi: Rethinking Dictionaries and Glyphs for Chinese Language Pre-training".
+[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-370/)
+[![ArXiv](https://img.shields.io/badge/Paper-ArXiv-red.svg)](https://arxiv.org/abs/2305.18760)
+[![ACL](https://img.shields.io/badge/Paper-ACL-red.svg)](https://aclanthology.org/2023.findings-acl.70/)
+
+This is the official implementation of the ACL 2023 Findings paper [Shuo Wen Jie Zi: Rethinking Dictionaries and Glyphs for Chinese Language Pre-training](https://aclanthology.org/2023.findings-acl.70/).
 
 ## Installation
 
@@ -66,7 +70,7 @@ The dataset structure should look like the following:
 
 ### Pre-train
 
-```
+```bash
 export MODEL_NAME=$1
 export MODEL_PATH='prev_trained_models/'$1
 export TRAIN=$2
@@ -104,7 +108,7 @@ python -m torch.distributed.launch \
 
 ### CLUE (We only show the script for TNEW'S)
 
-```
+```bash
 export MODEL_NAME=$1
 export MODEL_PATH='prev_trained_models/'$1
 export TASK_NAME=$2
@@ -141,8 +145,7 @@ python clue_tc.py \
 
 ### CCLUE (We only show the script for MRC)
 
-```
-
+```bash
 export MODEL_PATH='prev_trained_models/'$1
 export TASK_NAME=$2
 export LR=$3
@@ -179,7 +182,7 @@ python cclue_mrc.py \
 
 ### PolyMRC
 
-```
+```bash
 export MODEL_NAME=$1
 export MODEL_PATH='prev_trained_models/'$1
 export TASK_NAME=$2
@@ -214,14 +217,12 @@ python dict_key.py \
         --choices 4 \
         --glyph radical \
 ```
+
 ## Citation
-```
+```bibtex
 @inproceedings{wang-etal-2023-rethinking,
     title = "Rethinking Dictionaries and Glyphs for {C}hinese Language Pre-training",
-    author = "Wang, Yuxuan  and
-      Wang, Jack  and
-      Zhao, Dongyan  and
-      Zheng, Zilong",
+    author = "Wang, Yuxuan and Wang, Jack and Zhao, Dongyan and Zheng, Zilong",
     booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
     month = jul,
     year = "2023",
@@ -229,7 +230,5 @@ python dict_key.py \
     publisher = "Association for Computational Linguistics",
     url = "https://aclanthology.org/2023.findings-acl.70",
     pages = "1089--1101",
-    abstract = "We introduce CDBert, a new learning paradigm that enhances the semantics understanding ability of the Chinese PLMs with dictionary knowledge and structure of Chinese characters. We name the two core modules of CDBert as Shuowen and Jiezi, where Shuowen refers to the process of retrieving the most appropriate meaning from Chinese dictionaries and Jiezi refers to the process of enhancing characters{'} glyph representations with structure understanding. To facilitate dictionary understanding, we propose three pre-training tasks, i.e.„ Masked Entry Modeling, Contrastive Learning for Synonym and Antonym, and Example Learning. We evaluate our method on both modern Chinese understanding benchmark CLUE and ancient Chinese benchmark CCLUE. Moreover, we propose a new polysemy discrimination task PolyMRC based on the collected dictionary of ancient Chinese. Our paradigm demonstrates consistent improvements on previous Chinese PLMs across all tasks. Moreover, our approach yields significant boosting on few-shot setting of ancient Chinese understanding.",
 }
-
 ```
