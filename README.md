@@ -1,4 +1,4 @@
-# CDBert
+# Shuo Wen Jie Zi: Rethinking Dictionaries and Glyphs for Chinese Language Pre-training
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-370/)
 [![ArXiv](https://img.shields.io/badge/Paper-ArXiv-red.svg)](https://arxiv.org/abs/2305.18760)
