@@ -1,10 +1,12 @@
-# Shuo Wen Jie Zi: Rethinking Dictionaries and Glyphs for Chinese Language Pre-training
+<div align="center">
+	<h2> Shuo Wen Jie Zi (说文解字) <br> Rethinking Dictionaries and Glyphs for Chinese Language Pre-training </h2>
+</div>
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-370/)
 [![ArXiv](https://img.shields.io/badge/Paper-ArXiv-red.svg)](https://arxiv.org/abs/2305.18760)
 [![ACL](https://img.shields.io/badge/Paper-ACL-red.svg)](https://aclanthology.org/2023.findings-acl.70/)
 
-This is the official implementation of the ACL 2023 Findings paper [Shuo Wen Jie Zi: Rethinking Dictionaries and Glyphs for Chinese Language Pre-training](https://aclanthology.org/2023.findings-acl.70/).
+This is the official implementation of paper [Shuo Wen Jie Zi: Rethinking Dictionaries and Glyphs for Chinese Language Pre-training](https://aclanthology.org/2023.findings-acl.70/).
 
 ## Installation
 
